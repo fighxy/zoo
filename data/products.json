@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Grandorf для собак",
+    "description": "Сухой корм для взрослых собак, 10 кг",
+    "price": 7500,
+    "image": "/images/GD1.png"
+  },
+  {
+    "id": 2,
+    "name": "Игрушка для кошек",
+    "description": "Мышь на пружине",
+    "price": 300,
+    "image": "/images/cat-toy.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Аквариум",
+    "description": "Аквариум на 50 литров с фильтром",
+    "price": 5000,
+    "image": "/images/aquarium.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Лежанка для собак",
+    "description": "Мягкая лежанка размер M",
+    "price": 2000,
+    "image": "/images/dog-bed.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Корм для рыб",
+    "description": "Хлопья для тропических рыб, 100г",
+    "price": 200,
+    "image": "/images/fish-food.jpg"
+  }
+]
