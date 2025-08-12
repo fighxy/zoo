@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import CategoryBar from './components/CategoryBar';
+import { prisma } from '@/app/lib/prisma';
 
 type Product = {
   id: number;
@@ -10,11 +11,8 @@ type Product = {
 };
 
 async function getProducts() {
-  const res = await fetch('http://localhost:3000/api/products');
-  if (!res.ok) {
-    throw new Error('Failed to fetch products');
-  }
-  return res.json() as Promise<Product[]>;
+  const products = await prisma.product.findMany({ orderBy: { id: 'asc' } });
+  return products as unknown as Product[];
 }
 
 export default async function Home() {

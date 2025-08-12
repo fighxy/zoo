@@ -1,9 +1,12 @@
-import fs from 'fs';
-import path from 'path';
+import { prisma } from '@/app/lib/prisma';
 
 export async function GET() {
-  const filePath = path.join(process.cwd(), 'data', 'products.json');
-  const jsonData = fs.readFileSync(filePath, 'utf8');
-  const products = JSON.parse(jsonData);
-  return Response.json(products);
+  try {
+    const products = await prisma.product.findMany({
+      orderBy: { id: 'asc' },
+    });
+    return Response.json(products);
+  } catch {
+    return new Response('Failed to fetch products', { status: 500 });
+  }
 }
