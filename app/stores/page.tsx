@@ -4,7 +4,7 @@ export default function Stores() {
       <div className="max-w-7xl mx-auto">
         <h1 className="text-3xl font-bold text-center mb-8">Наши магазины</h1>
         <p className="text-lg text-gray-700">
-          Мы имеем магазины в следующих городах: Москва, Санкт-Петербург, Екатеринбург. Посетите нас!
+          Мы имеем магазины в Бердске, Искитиме!
         </p>
       </div>
     </div>

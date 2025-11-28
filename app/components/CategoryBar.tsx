@@ -4,11 +4,11 @@ import { useState } from 'react';
 
 export default function CategoryBar() {
   const categories = [
-    { name: 'Собаки', sub: ['Корм Влажный', 'Корм Сухой'] },
-    { name: 'Кошки', sub: ['Корм Влажный', 'Корм Сухой'] },
-    { name: 'Рыбки', sub: ['Корм Влажный', 'Корм Сухой'] },
-    { name: 'Птицы', sub: ['Корм Влажный', 'Корм Сухой'] },
-    { name: 'Грызуны', sub: ['Корм Влажный', 'Корм Сухой'] },
+    { name: 'Собаки', sub: ['Корм Влажный', 'Корм Сухой', 'Аксессуары', 'Гигиена', 'Здоровье', 'Лакомство', 'Одежда и обувь'] },
+    { name: 'Кошки', sub: ['Корм Влажный', 'Корм Сухой', 'Аксессуары', 'Гигиена', 'Здоровье', 'Лакомство', 'Наполнитель', 'Одежда и обувь'] },
+    { name: 'Рыбки' },
+    { name: 'Птицы' },
+    { name: 'Грызуны' },
   ];
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -27,7 +27,7 @@ export default function CategoryBar() {
               {cat.name}
             </a>
             <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md hidden group-hover:block z-10">
-              {cat.sub.map((sub) => (
+              {cat.sub?.map((sub) => (
                 <a key={sub} href={`#${sub.toLowerCase()}`} className="block px-4 py-2 text-gray-800 hover:bg-blue-100">
                   {sub}
                 </a>
